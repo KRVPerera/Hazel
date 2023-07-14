@@ -15,7 +15,7 @@ objdir("bin-int/" .. outputdir .. "/%{prj.name}")
 
 files {"%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp"}
 
-includedirs {"%{prj.name}/vendor/spdlog/include"}
+includedirs {"%{prj.name}/src", "%{prj.name}/vendor/spdlog/include"}
 
 filter "system:windows"
 cppdialect "C++17"
@@ -53,9 +53,7 @@ files {"%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp"}
 
 includedirs {"Hazel/vendor/spdlog/include", "Hazel/src"}
 
-links {
-    "Hazel"
-}
+links {"Hazel"}
 
 filter "system:windows"
 cppdialect "C++17"
