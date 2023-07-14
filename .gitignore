@@ -399,3 +399,10 @@ FodyWeavers.xsd
 
 # bin-int
 bin-int
+**/bin/
+
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+**.csproj
