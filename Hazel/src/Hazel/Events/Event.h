@@ -28,6 +28,7 @@ namespace Hazel {
 
 	class HAZEL_API Event
 	{
+		friend class EnevtDispatcher;
 	public:
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
@@ -40,6 +41,11 @@ namespace Hazel {
 
 	protected:
 		bool m_Handled = false;
+	};
+
+	class EnevtDispatcher
+	{
+
 	};
 
 
