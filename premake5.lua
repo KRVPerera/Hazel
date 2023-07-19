@@ -35,7 +35,7 @@ systemversion "latest"
 
 defines {"HZ_PLATFORM_WINDOWS", "HZ_BUILD_DLL"}
 
-postbuildcommands {("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")}
+postbuildcommands {("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")}
 
 filter "configurations:Debug"
 defines "HZ_DEBUG"
@@ -83,4 +83,5 @@ optimize "On"
 
 filter "configurations:Dist"
 defines "HZ_DIST"
+buildoptions "/MD"
 optimize "On"
